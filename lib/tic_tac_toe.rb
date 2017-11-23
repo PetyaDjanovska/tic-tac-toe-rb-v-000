@@ -9,6 +9,8 @@ WIN_COMBINATIONS = [
   [2,4,6]  # right diagonal
 ]
 
+board = [" "," "," "," "," "," "," "," "," "]
+
 def display_board(array)
 puts " #{array[0]} | #{array[1]} | #{array[2]} "
 puts "-----------"
