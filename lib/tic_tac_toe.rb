@@ -18,3 +18,7 @@ puts " #{array[3]} | #{array[4]} | #{array[5]} "
 puts "-----------"
 puts " #{array[6]} | #{array[7]} | #{array[8]} "
 end
+
+def input_to_index(user_input_index)
+ return ((user_input_index.to_i) - 1)
+end
