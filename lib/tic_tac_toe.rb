@@ -27,6 +27,15 @@ def input_to_index(user_input_index)
  return ((user_input_index.to_i) - 1)
 end
 
+def position_taken? (board, index)
+ if board[index] == " " || board[index] == "" || board[index] == nil
+   return false
+ else board[index] == "X" || board[index] == "O"
+  return true
+ end
+end
+
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -37,12 +46,4 @@ def turn(board)
     display_board(board)
   else turn(board)
   end
-end
-
-def position_taken? (board, index)
- if board[index] == " " || board[index] == "" || board[index] == nil
-   return false
- else board[index] == "X" || board[index] == "O"
-  return true
- end
 end
