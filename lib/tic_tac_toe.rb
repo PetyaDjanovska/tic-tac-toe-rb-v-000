@@ -58,3 +58,11 @@ def turn(board)
   else turn(board)
   end
 end
+
+def turn_count (board)
+  counter = 0
+  while counter < 9
+   turn(board)
+   counter += 1
+   end
+end
