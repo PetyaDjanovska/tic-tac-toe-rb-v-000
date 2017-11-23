@@ -22,3 +22,7 @@ end
 def input_to_index(user_input_index)
  return ((user_input_index.to_i) - 1)
 end
+
+def input_to_index(user_input_index)
+ return ((user_input_index.to_i) - 1)
+end
