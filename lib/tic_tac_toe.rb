@@ -26,3 +26,15 @@ end
 def input_to_index(user_input_index)
  return ((user_input_index.to_i) - 1)
 end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board,index)
+    position_taken?(board,index)
+    move(board,index)
+    display_board(board)
+  else turn(board)
+  end
+end
