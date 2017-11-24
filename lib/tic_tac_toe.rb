@@ -111,11 +111,12 @@ end
 
 
 def draw?(board)
-  if won?(board) == false && full?(board) == true
+  won_result = won?(board)
+  if !won_result && full?(board)
     return true
-  elsif won?(board) == false && full?(board) == false
+  elsif !won_result && full?(board)
     false
-  elsif won?(board) == true
+  elsif won_result
     false
   else
     false
