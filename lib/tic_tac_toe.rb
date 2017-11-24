@@ -92,3 +92,48 @@ def won? (board)
   end
   false
 end
+
+def full?(board)
+  if board.include?(nil)
+    return false
+  elsif board.include?(" ")
+    return false
+  else
+    return true
+  end
+end
+
+
+def draw?(board)
+  if won?(board) == false && full?(board) == true
+    return true
+  elsif won?(board) == false && full?(board) == false
+    false
+  elsif won?(board) == true
+    false
+  else
+    false
+  end
+end
+
+def over?(board)
+  if won?(board) || draw?(board) || full?(board)
+    true
+  else
+    false
+  end
+end
+
+def winner(board)
+  if won?(board)
+    win_combination = won?(board)
+
+    if board[win_combination[0]] == "X"
+      return "X"
+    elsif board[win_combination[0]] == "O"
+      return "O"
+    end
+  else
+    nil
+  end
+  
