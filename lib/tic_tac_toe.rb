@@ -59,10 +59,12 @@ def turn(board)
   end
 end
 
-def turn_count (board)
+def turn_count(board)
   counter = 0
-  while counter < 9
-   turn(board)
-   counter += 1
-   end
+  board.each do |position|
+    if (position == "X" || position == "O")
+      counter += 1
+    end
+  end
+  counter
 end
