@@ -144,3 +144,4 @@ def winner(board)
      counter += 1
      end
   end
+end
