@@ -133,14 +133,14 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board)
+  #if won?(board)
     win_combination = won?(board)
 
     if board[win_combination[0]] == "X"
       return "X"
     elsif board[win_combination[0]] == "O"
       return "O"
-    end
+    #end
   else
     nil
   end
