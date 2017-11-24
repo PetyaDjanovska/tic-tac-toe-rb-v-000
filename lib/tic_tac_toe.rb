@@ -143,6 +143,7 @@ def winner(board)
   else
     nil
   end
+end
 
   def play (board)
   counter = 0
